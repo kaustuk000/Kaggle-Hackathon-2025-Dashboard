@@ -911,5 +911,5 @@ def render_stage(btn1, btn2, btn3):
 server = app.server
 
 if __name__ == "__main__":
-    app.run_server(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8080, debug=True)
 
