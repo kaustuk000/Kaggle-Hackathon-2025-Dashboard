@@ -11,7 +11,7 @@ from wordcloud import WordCloud
 from PIL import Image
 import numpy as np
 import folium
-
+import os
 
 # Load data
 comp_per_year = pd.read_csv("comp_per_year.csv", index_col=0)
@@ -911,5 +911,6 @@ def render_stage(btn1, btn2, btn3):
 server = app.server
 
 if __name__ == "__main__":
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    port = int(os.environ.get("PORT", 10000))  # Use Render's provided port, fallback to 10000 locally
+    app.run(host="0.0.0.0", port=port, debug=True)
 
