@@ -632,7 +632,7 @@ def render_stage(btn1, btn2, btn3):
                 html.Br(),
                 html.Br(),
                 html.B("3. How has regional participation evolved over the last decade?"),
-                html.P("This line chart tracks user registration trends across top countries, revealing shifting momentum in global engagement with the data science community."),
+                html.P("This Map tracks user registration growth trends across top countries, revealing shifting momentum in global engagement with the data science community."),
                 html.Iframe(
                     srcDoc= render_map_from_df(df= growth_map, GrowthMap= True),
                     style={"width": "100%", "height" : "600px", "border": "none"}
